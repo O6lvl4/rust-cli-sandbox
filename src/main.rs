@@ -1,5 +1,5 @@
 use clap::Parser;
-mod quiz_01_04;
+mod hello_world;
 
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
@@ -13,7 +13,7 @@ fn main() {
     let args = Args::parse();
     let select_quiz = args.select_quiz.to_string();
     match &*select_quiz {
-        "01-04" => println!("quiz_01_04 => {}", quiz_01_04::hello_world()),
+        "001" => println!("001 => {}", hello_world::hello_world()),
         _ => println!("no select"),
     }
 }
